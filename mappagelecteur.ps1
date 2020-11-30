@@ -2,7 +2,8 @@
 {
 
 net use
-
+# je pense qu'il faudrait ajouter une commande plus explicite
+# Todo : Indenter le code
 $namemappage=Read-Host "Saisir la lettre du partage"
 $cheminpartage=Read-Host "Saisir le chemin réseau du partage"
 $idcredential=Read-Host "Saisir l'identifiant du partage distant"
