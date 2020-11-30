@@ -1,4 +1,6 @@
-﻿function newpsdrive()
+﻿#test
+
+function newpsdrive()
 {
 
 net use
