@@ -18,10 +18,18 @@ jobs:
           fetch-depth: 0
 
       - name: Super-Linter
-        uses: docker://github/super-linter:latest
+        uses: github/super-linter@v3
         env:
           VALIDATE_ALL_CODEBASE: true
           VALIDATE_POWERSHELL: true
-          OUTPUT_DETAILS: simpler 
+          DISABLE_ERRORS: true
+          OUTPUT_DETAILS: detailed
+          OUTPUT_FORMAT: tap
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload Report as an artifact
+        uses: actions/upload-artifact@master
+        with:
+          name: linter-report
+          path: "${{ github.workspace }}/super-linter.report/"
