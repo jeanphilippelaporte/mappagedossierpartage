@@ -19,6 +19,7 @@ jobs:
           VALIDATE_POWERSHELL: true
           DISABLE_ERRORS: false
           OUTPUT_DETAILS: detailed
+          OUTPUT_FORMAT: tap
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
