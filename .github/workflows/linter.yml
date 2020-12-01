@@ -52,6 +52,6 @@ jobs:
         env:
           VALIDATE_ALL_CODEBASE: true
           VALIDATE_POWERSHELL: true
-          OUTPUT_FOLDER: /.github/workspace 
+          OUTPUT_DETAILS: detailed 
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
