@@ -52,6 +52,6 @@ jobs:
         env:
           VALIDATE_ALL_CODEBASE: true
           VALIDATE_POWERSHELL: true
-          OUTPUT_DETAILS: detailed 
+          OUTPUT_DETAILS: simpler 
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
