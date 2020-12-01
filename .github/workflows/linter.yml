@@ -12,19 +12,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-
       - name: Super-Linter
         uses: github/super-linter@v3
         env:
           VALIDATE_ALL_CODEBASE: true
           VALIDATE_POWERSHELL: true
-          DISABLE_ERRORS: true
+          DISABLE_ERRORS: false
           OUTPUT_DETAILS: detailed
-          OUTPUT_FORMAT: tap
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
