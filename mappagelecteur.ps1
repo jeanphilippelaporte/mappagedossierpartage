@@ -19,7 +19,7 @@ function retirermappage()
 
 function problemuac()
     {
-        Write-Host "Attention l'ordinateur va redemarrer apres le lancement de la modification , Veuillez fermer toutes vos applications"
+        Write-Output "Attention l'ordinateur va redemarrer apres le lancement de la modification , Veuillez fermer toutes vos applications"
         pause
         Set-GPPrefRegistryValue -context User  -key HKEY_LOCAL_MACHINE/SOFTWARE/Microsoft/Windows/CurrentVersion/Policies/System -ValueName EnableLinkedConnections -value 1 -type DWord -Action Create
         shutdown -r -t 0
